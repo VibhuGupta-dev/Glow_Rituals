@@ -96,7 +96,7 @@ export function AllProducts() {
     <section
     id="all-products"
       ref={sectionRef}
-      className="relative bg-[#fff8eb] min-h-screen overflow-hidden py-10 md:py-20"
+      className="relative min-h-screen overflow-hidden py-10 md:py-20"
     >
       {/* Background Glows */}
       <div className="absolute left-0 top-0 h-[600px] w-[600px] rounded-full bg-orange-300/20 blur-3xl"></div>
@@ -128,7 +128,7 @@ export function AllProducts() {
                 ref={(el) => (cardsRef.current[index] = el)}
                 className="w-full md:w-1/3 flex-shrink-0"
               >
-                <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                <div className="grid md:grid-cols-2 rounded-xl bg-white gap-10 md:gap-16 items-center">
                   {/* Image Side */}
                   <div className="flex justify-center order-1 md:order-1">
                     <div className="group relative w-full max-w-[420px]">
@@ -142,7 +142,7 @@ export function AllProducts() {
                         ref={(el) => (imageRef.current[index] = el)}
                         src={product.image}
                         alt={product.name}
-                        className="relative z-10 w-full drop-shadow-[0_40px_40px_rgba(0,0,0,0.35)] transition-transform duration-500 group-hover:scale-105"
+                        className="relative top-4 rounded-4xl w-full drop-shadow-[0_40px_40px_rgba(0,0,0,0.35)] transition-transform duration-500 group-hover:scale-105" 
                       />
                     </div>
                   </div>

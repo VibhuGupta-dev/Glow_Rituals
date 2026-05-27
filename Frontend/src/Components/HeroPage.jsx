@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
-
+import {  useNavigate } from "react-router-dom";
 import yellow from "../assets/yellow.png";
 import green from "../assets/green.png";
 import pink from "../assets/pink.png";
@@ -57,6 +57,11 @@ export function HomePage({ onGradientChange }) {
 
   const slide = slides[current];
   const qty = quantities[selectedQty];
+  const navigate = useNavigate();
+
+  function handlegetlook () {
+    navigate("/getlook")
+  }
 
   useEffect(() => {
     onGradientChange?.(slide.gradient);
@@ -201,6 +206,7 @@ export function HomePage({ onGradientChange }) {
 
           {/* Button */}
           <button
+          onClick={handlegetlook}
             className="
             mt-8 sm:mt-10
             mx-auto lg:mx-0
