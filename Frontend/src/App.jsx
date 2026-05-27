@@ -6,11 +6,13 @@ import {
   Route,
 } from "react-router-dom";
 
+
 import { Navbar } from "./Components/Navbar";
 import { HomePage } from "./Components/HeroPage";
 import { AllProducts } from "./Components/AllProduct";
 import { ContactUs } from "./Components/ContactUs";
 import { Getlook } from "./Components/Getlook";
+import { Aboutus } from "./Components/AboutUs";
 
 function App() {
   const [currentGradient, setCurrentGradient] = useState(
@@ -61,7 +63,7 @@ function MainContent({
       />
 
       <AllProducts />
-
+      <Aboutus />
       <ContactUs
         currentGradient={currentGradient}
       />
